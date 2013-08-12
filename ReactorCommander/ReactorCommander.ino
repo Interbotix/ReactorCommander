@@ -200,6 +200,7 @@ void setup() {
 void loop() {
   boolean fChanged = false;
   if (command.ReadMsgs()) {
+    digitalWrite(0,HIGH-digitalRead(0));     
     // See if the Arm is active yet...
     if (g_fArmActive) {
       sBase = g_sBase;
